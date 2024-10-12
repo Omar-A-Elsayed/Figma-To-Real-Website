@@ -1,0 +1,898 @@
+:root {
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --dark-color: #070917;
+  --light-color: #e8f7fb;
+  --light-blue-color: #6f7dfb;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 10vw;
+  margin: 0 auto;
+  overflow-x: clip;
+}
+
+/* Buttons */
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 1.5rem;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.btn.dark {
+  background: var(--dark-blue-color);
+}
+.btn.light {
+  background: var(--orange-color);
+}
+.btn.enrol-icon::before {
+  content: url("/images/enrol-icon.svg");
+  margin-right: 0.25rem;
+}
+
+/* Header */
+
+header {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 83%;
+  padding: 2.25rem 0;
+  top: 0;
+  z-index: 100;
+  left: 9rem;
+  transition: all 500ms ease;
+}
+
+nav.scrolled {
+  background: var(--dark-color);
+  box-shadow: 0 1rem 0.875rem -0.5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 0.5rem 0.5rem;
+  top: 0;
+  padding: 0.75rem;
+}
+
+nav .logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 3.75rem;
+  list-style: none;
+  margin: 0;
+}
+nav ul li a {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Hero section */
+
+.hero-section {
+  padding-top: 6rem;
+  display: flex;
+  width: 100%;
+  align-items: top;
+  justify-content: space-between;
+}
+.hero-section .left {
+  width: 33%;
+  padding-top: 0.7rem;
+}
+.hero-section .left h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 3.125rem;
+  line-height: 125%;
+  color: #ffffff;
+}
+
+.hero-section .left p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  line-height: 200%;
+  color: #ffffff;
+  margin-bottom: 1.875;
+}
+
+.hero-section .right {
+  display: flex;
+  width: 64%;
+  justify-content: space-between;
+}
+
+.hero-section .achievement-cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.hero-section .right .hero-image-wrapper {
+  position: relative;
+  width: 45%;
+  height: 36.4rem;
+}
+
+.hero-section .right .hero-image {
+  position: absolute;
+  right: -4rem;
+  bottom: 0;
+  vertical-align: middle;
+}
+
+/* Achievement cards*/
+
+.achievement-card {
+  position: relative;
+  color: var(--dark-blue-color);
+  z-index: 10;
+  border-radius: 1.5rem;
+  /* linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%); */
+}
+
+.achievement-card .bg {
+  background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+  border-radius: 1.5rem;
+  position: relative;
+  padding-right: 0.625rem;
+  padding-bottom: 0.625rem;
+}
+
+.achievement-card .content {
+  border-radius: 1.5rem;
+  background-color: #fff;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievement-card.students-enrolled {
+  width: 12.875rem;
+  position: relative;
+  top: 1rem;
+  left: 2rem;
+}
+
+.achievement-card.overall-rating {
+  width: 11.44rem;
+  position: relative;
+  bottom: 1rem;
+}
+
+.achievement-card .content div {
+  display: flex;
+  align-items: center;
+  gap: 0rem;
+}
+
+.achievement-card h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: var(--dark-blue-color);
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  flex: 1;
+}
+
+.achievement-card img {
+  flex: 1;
+  width: 2.75rem;
+  height: 2.75rem;
+}
+
+.achievement-card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--dark-blue-color);
+}
+
+/* Testimonail section */
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 120%;
+  color: var(--dark-blue-color);
+}
+
+h2.light {
+  color: #fff;
+}
+
+section p {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 200%;
+  color: var(--dark-blue-color);
+  margin: 0.75rem 0;
+}
+
+.testimonails-section {
+  display: flex;
+  align-items: center;
+  gap: 6.375rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+}
+
+.testimonails-section .btn {
+  margin-top: 1.875rem;
+}
+
+.testimonails-section .mobile-btn {
+  display: none;
+}
+
+.testimonails-section .testimonail-card {
+  width: 27.625rem;
+  background: #ffffff;
+  box-shadow: 0rem 0.5625rem 2.25rem rgba(0, 0, 0, 0.2);
+  border-radius: 1.5rem;
+  margin-bottom: 3.125rem;
+  position: relative;
+}
+
+.testimonails-section .testimonail-card::before {
+  content: "";
+  width: 1.75rem;
+  position: absolute;
+  height: 2.5rem;
+  top: -2.5rem;
+  left: 4.4rem;
+  background: var(--dark-blue-color);
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.testimonails-section .testimonail-card:last-child::before {
+  left: 2.5rem;
+  top: -3.125rem;
+  border-radius: 0 0 1.5rem 1.5rem;
+  height: calc(100% + 5.625rem);
+  z-index: -1;
+}
+
+.testimonails-section .testimonail-card .content {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  border-radius: 1.5rem;
+  background-color: var(--light-blue-color);
+}
+
+.testimonails-section .testimonail-card:last-child .content {
+  background-color: var(--orange-color);
+}
+
+.testimonails-section .testimonail-card .info h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 120%;
+  margin: 0;
+  color: var(--dark-blue-color);
+}
+
+.testimonails-section .testimonail-card .info {
+  padding: 1.5rem 2rem;
+  background: #fff;
+  border-radius: 1.5rem;
+}
+
+.testimonails-section .testimonail-card .info p.company {
+  font-family: "Raleway", sans-serif;
+  font-weight: normal;
+  font-size: 1.125rem;
+  line-height: 120%;
+  color: var(--dark-blue-color);
+}
+
+.testimonails-section .testimonail-card img {
+  width: 7.5rem;
+  height: 7.5rem;
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+}
+
+.testimonails-section .testimonail-card:last-child {
+  transform: translateX(2rem);
+}
+
+/* Courses section */
+.courses-section {
+  background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+  width: 100%;
+}
+
+.courses-section h2 {
+  text-align: center;
+}
+.courses-section .course-cards {
+  display: flex;
+  gap: 4.5625rem;
+  justify-content: space-between;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.courses-section .course-cards img {
+  width: 100%;
+  filter: drop-shadow(0rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25));
+  border-radius: 1.5rem;
+}
+
+.courses-section .course-card {
+  background: #ffffff;
+  border-radius: 1.5rem;
+  padding: 0 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.courses-section .course-card::after {
+  content: "";
+  height: 0.5rem;
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  bottom: 0;
+  background: var(--dark-blue-color);
+  border-radius: 1.5rem;
+}
+
+.courses-section .course-card h3 {
+  width: 70%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 1.875rem;
+  line-height: 150%;
+
+  color: var(--dark-blue-color);
+}
+
+.courses-section .course-card .info {
+  padding: 1rem 0;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courses-section .course-card .duration {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 1rem;
+  line-height: 150%;
+  white-space: nowrap;
+  color: var(--dark-blue-color);
+  position: relative;
+  padding-left: 1.25rem;
+}
+
+.courses-section .course-card .duration::before {
+  content: url("/images/clock-icon.svg");
+  position: absolute;
+  top: 0.125rem;
+  left: -0.333333333rem;
+}
+
+.courses-section .courses-btn-div {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* App section */
+
+.app-section {
+  text-align: center;
+  margin: 6.25rem 0;
+}
+
+.app-section p {
+  margin-bottom: 3rem;
+}
+
+.app-section .app-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.875rem;
+  margin-top: 1.5rem;
+}
+
+.app-section .app-btn {
+  padding: 1rem 1.875rem;
+  background: #000000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  min-width: 19.375rem;
+}
+
+.app-section .app-btn span {
+  font-weight: normal;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+/* Footer */
+
+footer {
+  background: var(--dark-color);
+  color: #fff;
+  padding-top: 2rem !important;
+  padding-bottom: 2rem !important;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer h3 {
+  color: var(--orange-color);
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 1.25rem;
+}
+
+footer ul li {
+  margin: 1rem 0;
+}
+
+footer .links-container {
+  display: grid;
+  grid-template-columns: 2fr 2fr 3fr;
+}
+
+footer .social {
+  margin-left: 1.25rem;
+}
+
+footer .social a {
+  margin-right: 1.75rem;
+}
+
+footer form {
+  margin-left: 1.25rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+footer form input {
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 200%;
+  border-radius: 0.5rem;
+  /* btn at right 8 rem */
+  padding: 0.5rem 10rem 0.5rem 2rem;
+  width: 100%;
+  border: none;
+  color: #000000;
+}
+
+footer form .submit-btn {
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+  background: var(--dark-blue-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem 2rem;
+  border: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+footer .copyright {
+  margin-top: 2.25rem;
+  margin-bottom: 0;
+}
+
+nav.mobile-nav,
+.mobile-menu-container {
+  display: none;
+}
+
+nav.mobile-nav {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  section {
+    gap: 4rem;
+  }
+
+  .btn {
+    padding: 0.75rem 2rem;
+  }
+
+  nav {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 2.25rem 6.25rem;
+  }
+
+  nav.scrolled {
+    padding: 1rem 6.25rem;
+  }
+
+  .hero-section {
+    flex-direction: column;
+  }
+
+  .hero-section .left {
+    width: 100%;
+  }
+
+  .hero-section .right {
+    width: 100%;
+  }
+  .achievement-card.overall-rating {
+    left: 2rem;
+  }
+
+  .hero-section .right .hero-image {
+    right: -7.7rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .testimonails-section {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 3.125rem;
+  }
+
+  .testimonails-section .testimonail-card {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+
+  .testimonails-section .testimonail-card:last-child::before {
+    top: -2.5rem;
+    left: 4.3rem;
+    height: calc(100% + 5.625rem);
+  }
+
+  .testimonails-section .testimonail-card:last-child {
+    transform: translatex(0px);
+  }
+
+  .testimonails-section .desktop-btn {
+    display: none;
+  }
+
+  .testimonails-section .mobile-btn {
+    display: block;
+    align-self: flex-end;
+    order: 3;
+  }
+
+  .testimonails-section .right {
+    order: 1;
+  }
+
+  .testimonails-section .left {
+    order: 2;
+  }
+
+  .testimonails-section .right p {
+    display: inline;
+  }
+
+  .courses-section .course-cards {
+    flex-direction: column;
+    gap: 5rem;
+    align-items: center;
+  }
+
+  .courses-section .course-card img {
+    height: 16.25rem;
+    object-fit: cover;
+  }
+
+  .courses-section h2 {
+    margin-bottom: 4.125rem;
+  }
+
+  footer .links-container {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  footer .links-container .links:last-child {
+    grid-column: 1 / 3;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  nav.mobile-nav {
+    display: flex;
+  }
+
+  nav.mobile-nav.scrolled {
+    padding: 1.3rem 6.25rem;
+    background: var(--light-blue-color);
+    box-shadow: 0 9px 21px -5px rgba(0, 0, 0, 0.3);
+  }
+
+  .mobile-menu-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 100%;
+    background: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    transition: all 400ms ease;
+  }
+
+  .mobile-menu-container.active {
+    left: 0;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .mobile-menu-container .close-icon {
+    position: fixed;
+    top: 2rem;
+    right: 6.25rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 400ms ease;
+  }
+
+  .mobile-menu-container.active .close-icon {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .mobile-menu-container ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .mobile-menu-container ul li {
+    margin: 1.875rem 0;
+    text-align: center;
+  }
+
+  .mobile-menu-container ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 700px) {
+  nav {
+    display: none;
+  }
+  nav.mobile-nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: all 500ms ease;
+    display: flex;
+    width: 100vw;
+    padding: 0;
+    margin: 0 auto;
+    border: none;
+    padding: 60px 7.7vw 58px;
+  }
+  nav.mobile-nav.scrolled {
+    padding: 0.5rem 1.25rem;
+    background: var(--light-blue-color);
+    box-shadow: 0 9px 21px -5px rgba(0, 0, 0, 0.3);
+  }
+  .mobile-menu-container.active {
+    left: 0;
+    height: 100vh;
+    overflow-y: hidden;
+  }
+  nav.mobile-nav .logo {
+    align-self: flex-start;
+  }
+  nav.mobile-nav .menu-icon {
+    align-self: flex-end;
+  }
+
+  .mobile-menu-container .close-icon {
+    right: 2rem;
+  }
+
+  .hero-section {
+    padding-top: 6rem !important;
+  }
+
+  .hero-section .achievement-cards .content p {
+    display: ruby-text;
+  }
+
+  .achievement-card.students-enrolled {
+    width: 11.3rem;
+    left: 0;
+  }
+
+  .achievement-card.students-enrolled .content {
+    padding: 0.8rem 0;
+    height: 6rem;
+  }
+
+  .achievement-card.overall-rating {
+    width: 10rem;
+    left: 0;
+  }
+
+  .achievement-card.overall-rating .content {
+    padding: 0.8rem 0;
+    height: 6rem;
+  }
+
+  .hero-section .right .hero-image-wrapper {
+    width: 30%;
+    height: 25rem;
+  }
+
+  .hero-section .right .hero-image {
+    height: 100%;
+    right: -6rem;
+  }
+
+  /* End of hero section */
+
+  .testimonails-section.wrapper {
+    padding-bottom: 1rem;
+  }
+
+  .testimonails-section .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonails-section .testimonail-card img {
+    width: 6.25rem;
+    height: 6.25rem;
+    bottom: 2rem;
+  }
+
+  .courses-section.wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 4.375rem;
+    padding-top: 1rem;
+  }
+
+  .courses-section .courses-btn-div {
+    margin-right: 2rem;
+  }
+  .app-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 0rem;
+  }
+  .app-buttons {
+    display: flex;
+    flex-direction: column;
+  }
+  .app-section h2 {
+    font-size: 1.875rem;
+  }
+
+  .wrapper {
+    padding: 0 4vw;
+  }
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer ul {
+    padding-left: 0;
+  }
+  footer .links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  footer form {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer form .submit-btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 0;
+    width: 50%;
+    height: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  footer form input {
+    padding: 0.5rem 2rem;
+    height: 2.5rem;
+    width: 100%;
+    right: 0.8rem;
+  }
+  footer h3 {
+    margin-left: 0rem;
+  }
+
+  footer .social {
+    margin-left: 3rem;
+  }
+
+  .copyright {
+    display: ruby-text;
+    font-size: 0.8rem;
+    margin-top: 1.25rem;
+  }
+}
